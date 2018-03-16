@@ -12,8 +12,16 @@ body {
 .itemBody {
 	border: 1px solid red;
 }
+
 .leftBar {
 	grid-area: aside;
+	display: grid;
+	grid-template-rows: 20% 1fr 1fr;
+	grid-row-gap: 10px;
+	align-content: start;
+	grid-template-areas: "tittle"
+						 "myPlayLst"
+						 "frPlayLst";
 }
 
 .frmSearch {
@@ -22,4 +30,17 @@ body {
 
 .secVideos {
 	grid-area: video;
+}
+
+
+.headPlatzi {
+	grid-area: tittle;
+}
+
+.myPlayList {
+	grid-area: myPlayLst;
+}
+
+.frPlayList {
+	grid-area: frPlayLst;
 }
