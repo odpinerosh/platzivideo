@@ -1,0 +1,25 @@
+body {
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	display: grid;
+	grid-template: 10% 1fr / 30% 1fr;
+	grid-gap: 20px;
+	grid-template-areas: "aside form"
+						 "aside video";
+
+}
+
+.itemBody {
+	border: 1px solid red;
+}
+.leftBar {
+	grid-area: aside;
+}
+
+.frmSearch {
+	grid-area: form;
+}
+
+.secVideos {
+	grid-area: video;
+}
