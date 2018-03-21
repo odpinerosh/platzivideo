@@ -33,7 +33,7 @@ h4, h5 {
 	color: #F1F1EE;
 	grid-area: aside;
 	display: grid;
-	font-size: 1.5vh;
+	
 	grid-template: auto auto / auto;
 	grid-row-gap: 10px;
 	align-content: start;
@@ -75,6 +75,7 @@ h4, h5 {
 	display: flex;
 	margin: 0;
 	align-self: center;
+	font-size: 3vh;
 }
 
 
@@ -88,7 +89,7 @@ h4, h5 {
 
 .headPlatzi h1 {
 	margin: 0;
-	font-size: 1.5em;
+	font-size: 3vh;
 }
 
 .whitePlatzi {
@@ -104,9 +105,10 @@ h4, h5 {
 	grid-area: myPlayLst;
 }
 
+
 .lstPlay li {
 	font-family: "Arial";
-	font-size: 1.5vh;
+	font-size: 2vh;
 	font-weight: lighter;
 	padding-bottom: 15px;
 }
@@ -115,10 +117,10 @@ h4, h5 {
 	list-style: none;
 	padding-bottom: 15px;
 }
-.lstFriends li, .lstFriends a, .lstFriends span {
-	
+
+.h3Friends {
 	font-family: "Arial";
-	font-size: 1.5vh;
+	font-size: 2vh;
 	font-weight: lighter;
 }
 
@@ -136,11 +138,13 @@ h4, h5 {
     padding-right: 10px;
 }
 
-
 .frPlayList {
 	grid-area: frPlayLst;
 }
 
+.h2List {
+	font-size: 2.8vh;
+}
 
 .secVideos {
 	grid-area: video;
@@ -158,7 +162,7 @@ h4, h5 {
 .divGVideo {
 	display: grid;
 	grid-template: 15% 1fr / 1fr;
-	grid-gap: 20px;
+	grid-gap: 25px;
 	padding-top: 15px; 
 }
 
@@ -166,6 +170,14 @@ h4, h5 {
 .headGVideo {
 	grid-row: 1 / 2;
 	padding-left: 30px;
+}
+
+.headGVideo span {
+	font-size: 2.8vh;
+}
+
+.headGVideo h4 {
+	font-size: 3vh;
 }
 
 
@@ -181,7 +193,7 @@ h4, h5 {
 
 .figVideo figcaption {
 	text-align: center;
-	font-size: 1.5vh;
+	font-size: 2vh;
 }
 
 .imgVideo {
