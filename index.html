@@ -8,9 +8,10 @@
 	<link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
 <body>
-	<div class="bigContainer">
+	<div class="bigContainer" id="bigContainer">
 		<header class="headPlatzi">
 				<h1><span class="whitePlatzi">Platzi</span><span class="pinkPlatzi">Vídeo</span></h1>
+				<span class="swOpen" id="swOpen">Buscar</span>
 		</header>
 
 		<aside class="leftBar">
@@ -73,7 +74,7 @@
 			</div>
 		</aside>
 
-		<section class="frmSearch">
+		<section class="frmSearch" id="frmSearch">
 			<form action="" class="frmSearchForm">
 				<input type="search" class="txtSearch" placeholder="Busca por artista, tema o amigo">
 			</form>
@@ -191,5 +192,23 @@
 			</div>
 		</div>
 	</footer>
+
+
+	<script type="text/javascript">
+		
+		var $openButton = document.getElementById('swOpen');
+		var $bigContainer = document.getElementById('bigContainer');
+		var $menu = document.getElementById('frmSearch');
+		
+		$openButton.addEventListener('click', function(){
+			$menu.classList.toggle('active');
+			$bigContainer.classList.toggle('active');
+		});
+
+		/*$closeButton.addEventListener('click', function (){
+			$menu.classList.toggle('active');			
+		});*/
+
+	</script>
 </body>
 </html>

@@ -14,18 +14,15 @@ h4, h5 {
 
 .bigContainer {
 	display: grid;
-	grid-template: 12vh auto 14vh / 40vh auto;
+	grid-template: 12vh auto 14vh / 40vh 1fr;
 	grid-column-gap: 20px;
 	grid-template-areas: "PlatziVideo form"
 						 "aside video"
 						 "corner corner";
+	margin-right: 10px;						 
 
 }
 
-
-.itemBody {
-	border: 1px solid red;
-}
 
 .leftBar {
 	padding-left: 15px;
@@ -33,7 +30,6 @@ h4, h5 {
 	color: #F1F1EE;
 	grid-area: aside;
 	display: grid;
-	
 	grid-template: auto auto / auto;
 	grid-row-gap: 10px;
 	align-content: start;
@@ -81,15 +77,14 @@ h4, h5 {
 
 .headPlatzi {
 	grid-area: PlatziVideo;
-	
-	padding-top: 15px;
-	padding-left: 15px;
 	background-color: #050725;
+	align-content: center;
 }
 
 .headPlatzi h1 {
 	margin: 0;
 	font-size: 3vh;
+	justify-self: center;
 }
 
 .whitePlatzi {
@@ -149,13 +144,12 @@ h4, h5 {
 .secVideos {
 	grid-area: video;
 	display: grid;
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-rows: repeat(3, auto);
 	grid-template-columns: 1fr;
 	grid-template-areas: "Destacados"
 	                     "Programar"
 	                     "Tope";
 	                     /*"Viendo";*/
-	grid-gap: 10px;
 }
 
 
@@ -163,7 +157,7 @@ h4, h5 {
 	display: grid;
 	grid-template: 15% 1fr / 1fr;
 	grid-gap: 25px;
-	padding-top: 15px; 
+	/*padding-top: 15px; */
 }
 
 
@@ -183,7 +177,7 @@ h4, h5 {
 
 .imgGVideo {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template: auto / repeat(4, 1fr);
 	grid-column-gap: 10px;
 }
 
@@ -199,8 +193,8 @@ h4, h5 {
 .imgVideo {
 	/*width: 80%;
 	height: 80%;*/
-	width: 20vh;
-	height: 20vh;
+	width: 100%;
+	height: auto;
 
 	object-fit: cover;
 	margin: auto;
@@ -209,20 +203,23 @@ h4, h5 {
 
 .divDestacados {
 	grid-area: Destacados;
+	display: grid;
+	grid-template: 15% 1fr / 1fr;
+	grid-row-gap: 10px; 
 }
 
 .divProgramar {
 	grid-area: Programar;
 	display: grid;
 	grid-template: 15% 1fr / 1fr;
-	grid-gap: 10px; 
+	grid-row-gap: 10px; 
 }
 
 .divTope {
 	grid-area: Tope;
 	display: grid;
 	grid-template: 15% 1fr / 1fr;
-	grid-gap: 10px; 
+	grid-row-gap: 10px; 
 }
 
 footer {
@@ -261,12 +258,85 @@ footer {
 	height: auto;
 }
 
-/*footer {
-   position: fixed;
-   left: 0px;
-   bottom: 0px;
-   height: 50px;
-   width: 100%;
-   margin-left: 30%;
-   background:#999;
-}*/
+
+@media (min-width: 980px) {
+	
+	.headPlatzi {
+		padding-top: 15px;
+		padding-left: 15px;
+	}
+
+	.swOpen {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.bigContainer.active {
+		grid-template: 12vh 15vh auto auto  / auto;
+		grid-row-gap: 20px;
+		grid-template-areas: "PlatziVideo"
+							 "form"
+							 "video"
+							 "aside";
+		margin-right: 0;							 
+	}
+
+	.bigContainer {
+		grid-template: 12vh auto auto  / auto;
+		grid-row-gap: 20px;
+		grid-template-areas: "PlatziVideo"
+							 "video"
+							 "aside";
+		margin-right: 0;					
+	}
+
+	.headPlatzi {
+		display: grid;
+		grid-template: auto / auto 25%;
+		grid-template-areas: "logo burger"
+		
+	}
+
+	.swOpen {
+		display: flex;
+		color: #fff;
+	}
+
+	.frmSearch {
+		display: none;
+	}
+
+	.frmSearch.active {
+		display: grid;
+		grid-template: auto auto / auto;
+		/*grid-gap: 10px;*/
+		justify-content: stretch;
+	}
+
+	.frmSearch .user {
+		justify-self: center;
+	}
+
+	.secVideos {
+		grid-row-gap: 5vh;
+	}
+
+	.headGVideo {
+		padding-left: 15px;
+	}
+
+	.imgGVideo {
+		display: grid;
+		grid-template: repeat(4, auto) / auto;
+		grid-row-gap: 5vh;
+	}
+
+	.imgVideo {
+		/*width: 80%;
+		height: 80%;*/
+		width: 50vh;
+		height: auto;
+	} 
+
+}
