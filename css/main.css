@@ -274,7 +274,6 @@ footer {
 @media (max-width: 768px) {
 	.bigContainer.active {
 		grid-template: 12vh 15vh auto auto  / auto;
-		grid-row-gap: 20px;
 		grid-template-areas: "PlatziVideo"
 							 "form"
 							 "video"
@@ -284,7 +283,6 @@ footer {
 
 	.bigContainer {
 		grid-template: 12vh auto auto  / auto;
-		grid-row-gap: 20px;
 		grid-template-areas: "PlatziVideo"
 							 "video"
 							 "aside";
@@ -308,10 +306,11 @@ footer {
 	}
 
 	.frmSearch.active {
+		z-index: -100;
 		display: grid;
 		grid-template: auto auto / auto;
-		/*grid-gap: 10px;*/
 		justify-content: stretch;
+		animation: brandywine 2s;
 	}
 
 	.frmSearch .user {
@@ -339,4 +338,14 @@ footer {
 		height: auto;
 	} 
 
+}
+
+@keyframes brandywine {
+	0% {
+		margin-top: -200px;
+	}
+
+	100% {
+		margin-top: 0;
+	}
 }
