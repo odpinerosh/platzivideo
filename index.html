@@ -10,8 +10,8 @@
 <body>
 	<div class="bigContainer" id="bigContainer">
 		<header class="headPlatzi">
-				<h1><span class="whitePlatzi">Platzi</span><span class="pinkPlatzi">Vídeo</span></h1>
-				<span class="swOpen" id="swOpen">Buscar</span>
+			<h1><span class="whitePlatzi">Platzi</span><span class="pinkPlatzi">Vídeo</span></h1>
+			<span class="swOpen" id="swOpen">Buscar</span>
 		</header>
 
 		<aside class="leftBar">
@@ -75,16 +75,19 @@
 		</aside>
 
 		<section class="frmSearch" id="frmSearch">
-			<form action="" class="frmSearchForm">
-				<input type="search" class="txtSearch" placeholder="Busca por artista, tema o amigo">
-			</form>
-			<div class="user">
-				<img src="img/usr_sorei.jpg" alt="Sorei Pañidlen" class="imgUser">
-				<h4>Sorei Pañidlen</h4>
-			</div>
+			
+				<form action="" class="frmSearchForm">
+					<input type="search" class="txtSearch" placeholder="Busca por artista, tema o amigo">
+				</form>
+				<div class="user">
+					<img src="img/usr_sorei.jpg" alt="Sorei Pañidlen" class="imgUser">
+					<h4>Sorei Pañidlen</h4>
+				</div>	
+			
+			
 		</section>
 
-		<section class="secVideos">
+		<section class="secVideos" id="secVideos">
 			<div class="divDestacados divGVideo">
 				<div class="headDestacados headGVideo">
 					<span class="txtIntro">Lo mejor de la semana</span>
@@ -193,22 +196,15 @@
 		</div>
 	</footer>
 
-
 	<script type="text/javascript">
-		
 		var $openButton = document.getElementById('swOpen');
-		var $bigContainer = document.getElementById('bigContainer');
-		var $menu = document.getElementById('frmSearch');
+		var $secVideos = document.getElementById('secVideos');
+		var $frmSearch = document.getElementById('frmSearch');
 		
 		$openButton.addEventListener('click', function(){
-			$menu.classList.toggle('active');
-			$bigContainer.classList.toggle('active');
+			$frmSearch.classList.toggle('active');
+			$secVideos.classList.toggle('active');
 		});
-
-		/*$closeButton.addEventListener('click', function (){
-			$menu.classList.toggle('active');			
-		});*/
-
 	</script>
 </body>
 </html>
