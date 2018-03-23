@@ -371,11 +371,26 @@ footer {
 		transition-duration: 1s;
 	}
 
-
 	.imgGVideo {
 		display: grid;
 		grid-template: repeat(2, auto) / 1fr 1fr;
 		grid-row-gap: 5vh;
+	}
+
+	.figVideo figcaption {
+		font-size: 4vh;
+	}
+
+	.lstPlay li {
+		font-size: 3vh;
+	}
+
+	.h3Friends {
+		font-size: 3.5vh;
+	}
+
+	.h2List {
+		font-size: 3.5vh;
 	}
 
 	.leftBar {
