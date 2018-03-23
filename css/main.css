@@ -231,7 +231,7 @@ footer {
 	left: 0px;
 	bottom: 0px;
 	width: 100%;
-	height: 14vh;
+	height: 15vh;
 	/*margin-left: 30%;*/
 
 	background: rgba(5,7,37,1);/* Old Browsers */
@@ -276,11 +276,12 @@ footer {
 
 @media (max-width: 768px) {
 	.bigContainer {
-		grid-template: 12vh 15vh auto auto  / auto;
+		grid-template: 12vh 15vh auto auto 14vh / auto;
 		grid-template-areas: "PlatziVideo"
 							 "form"
 							 "video"
-							 "aside";
+							 "aside"
+							 "footer";
 		margin-right: 0;							 
 	}
 
@@ -317,7 +318,7 @@ footer {
 		grid-row-gap: 5vh;
 		transition-property: margin-top;
 		transition-duration: 1s;
-		padding-bottom: 5px;
+		
 	}
 
 	.secVideos.active {
