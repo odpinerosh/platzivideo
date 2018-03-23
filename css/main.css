@@ -42,6 +42,8 @@ h4, h5 {
 	grid-area: form;
 	display: grid;
 	grid-template-columns: 1fr 25%;
+	grid-template-rows: 1fr;
+	grid-auto-rows: 0;
 	grid-gap: 10px;
 	align-items: center;
 }
@@ -223,7 +225,7 @@ h4, h5 {
 }
 
 footer {
-	/*grid-area: footer;*/
+	grid-area: corner;
 	color: #fff;
 	position: fixed;
 	left: 0px;
@@ -338,14 +340,12 @@ footer {
 
 }
 
-@media (orientation: landscape) {
-	.secVideos {
-		margin-top: -60px;
-		grid-row-gap: 5vh;
-		transition-property: margin-top;
-		transition-duration: 1s;
-	}
+@media (orientation: landscape) and (max-height: 350px)  {
 	
+	.headPlatzi h1 {
+		font-size: 4vh;
+	}
+
 	.frmSearch {
 		z-index: -100;
 		margin-top: -120px;
@@ -360,5 +360,24 @@ footer {
 		padding: 5px;
 		border-radius: .25em;
 		border: 1px solid #b2b1b6;
-}
-}	
+	}
+
+	.secVideos {
+		margin-top: -60px;
+		grid-row-gap: 5vh;
+		transition-property: margin-top;
+		transition-duration: 1s;
+	}
+
+
+	.imgGVideo {
+		display: grid;
+		grid-template: repeat(2, auto) / 1fr 1fr;
+		grid-row-gap: 5vh;
+	}
+
+	.leftBar {
+		grid-template: auto / auto auto;
+		grid-column-gap: 10px;
+		grid-template-areas: "myPlayLst frPlayLst";	
+	}	
