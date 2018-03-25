@@ -229,49 +229,60 @@ h1, h2, h3, h4, h5 {
 						 "frPlayLst";
 }
 
+	.h2List {
+		font-size: 1.2em;
+	}
+
 	.myPlayList {
+		margin-top: 15px;
 		grid-area: myPlayLst;
 	}
 
-	.lstPlay li {
-		font-family: "Arial";
-		font-size: 2vh;
-		font-weight: lighter;
-		padding-bottom: 15px;
-	}
-
-	.lstFriends li {
-		list-style: none;
-		padding-bottom: 15px;
-	}
-
-	.h3Friends {
-		font-family: "Arial";
-		font-size: 2vh;
-		font-weight: lighter;
-	}
-
-	.lstFriends li a {
-		display: inline-flex;
-		text-decoration: none;
-		color: #fff;
-	}
-
-	.imgFriends {
-	    border-radius: 50%;
-	    width: 5vh;
-	    height: 5vh;
-	    object-fit: cover;
-	    padding-right: 10px;
-	}
+		.lstPlay li {
+			font-family: "Arial";
+			font-size: 0.8em;
+			font-weight: lighter;
+			padding-bottom: 15px;
+		}
 
 	.frPlayList {
 		grid-area: frPlayLst;
 	}
 
-	.h2List {
-		font-size: 2.8vh;
-	}
+		.lstFriends {
+			padding-left: 4vh;
+		}
+
+			.lstFriends li {
+				list-style: none;
+				padding-bottom: 15px;
+			}
+
+				.h3Friends {
+					font-family: "Arial";
+					font-size: 0.8em;
+					font-weight: lighter;
+				}
+
+				.lstFriends .aImgFr {
+					display: flex;
+					align-items: center;
+					text-align:  left;
+					text-decoration: none;
+					color: #fff;
+				}
+
+				.imgFriends {
+				    border-radius: 50%;
+				    width: 5vh;
+				    height: 5vh;
+				    object-fit: cover;
+				    margin-right: 10px;
+				    
+				}
+
+
+
 
 /*
 
