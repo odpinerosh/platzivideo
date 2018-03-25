@@ -9,84 +9,30 @@
 </head>
 <body>
 	<div class="bigContainer" id="bigContainer">
+		
+		<!-- CABECERA -->
 		<header class="headPlatzi">
-			<h1><span class="whitePlatzi">Platzi</span><span class="pinkPlatzi">Vídeo</span></h1>
-			<span class="swOpen" id="swOpen">Buscar</span>
+			<div class="dH1">
+				<h1>
+					<span class="whitePlatzi">Platzi</span>
+					<span class="pinkPlatzi">Vídeo</span>
+				</h1>
+			</div>
+			<div class="dSpan"><span id="swOpen">Buscar</span></div>
 		</header>
 
-		<aside class="leftBar">
-			<div class="myPlayList">
-				<h2 class="h2List">Mi selección</h2>
-				<ol class="lstPlay">
-					<li>Queen - Don't stop me now</li>
-					<li>Slayer - Raining Blood</li>
-					<li>Metallica - Master of Puppets</li>
-					<li>Royal Blood - Figure It Out</li>
-					<li>AC/DC - Back in Black</li>
-					<li>The Black Crowes - Hard to Handle</li>
-					<li>The Darkness - I Believe in a Thing Called Love</li>
-					<li>Slayer - South of Heaven</li>
-					<li>Metallica - Seek And Destroy</li>
-					<li>Helloween - Twilight of the Gods</li>
-					<li>Helloween - You Always Walk Alone</li>				
-				</ol>
-			</div>
-			<div class="frPlayList">
-				<h2 class="h2List">Selecciones de amigos</h2>
-				<ul class="lstFriends">
-					<li>
-						<a href="">
-							<img src="img/fr_rociotwo.jpg" class="imgFriends" alt="Rocío Rodríguez">
-							<span class="h3Friends">Rocío Rodríguez</span>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/fr_jahir.jpg" class="imgFriends" alt="Jahir Preciado">
-							<span class="h3Friends">Jahir Preciado</span>
-						</a>
-					</li>
-					<li>
-						<a href="">
-							<img src="img/fr_mariko.jpg" class="imgFriends" alt="Mariko Takeuchi">
-							<span class="h3Friends">Mariko Takeuchi</span>
-						</a>					
-					</li>
-					<li>
-						<a href="">
-							<img src="img/fr_marisol.jpg" class="imgFriends" alt="Marisol Morena">
-							<span class="h3Friends">Marisol Morena Luque</span>
-						</a>					
-					</li>
-					<li>
-						<a href="">
-							<img src="img/fr_miranda.jpg" class="imgFriends" alt="Maximiliano Altagracia">
-							<span class="h3Friends">Maximiliano Altagracia</span>
-						</a>					
-					</li>
-					<li>
-						<a href="">
-							<img src="img/fr_reyes.jpg" class="imgFriends" alt="Reyes Prieto">
-							<span class="h3Friends">Reyes Prieto</span>
-						</a>					
-					</li>
-				</ul>
-			</div>
-		</aside>
-
+		<!-- BUSQUEDA / IMAGEN DE USUARIO -->
 		<section class="frmSearch" id="frmSearch">
-			
-				<form action="" class="frmSearchForm">
-					<input type="search" class="txtSearch" placeholder="Busca por artista, tema o amigo">
-				</form>
-				<div class="user">
-					<img src="img/usr_sorei.jpg" alt="Sorei Pañidlen" class="imgUser">
-					<h4>Sorei Pañidlen</h4>
-				</div>	
-			
-			
+			<form action="" class="frmSearchForm" id="frmSearchForm">
+				<input type="search" class="txtSearch" placeholder="Busca por artista, tema o amigo">
+			</form>
+			<div class="divUser" id="divUser">
+				<img src="img/usr_sorei.jpg" alt="Sorei Pañidlen" class="imgUser">
+				<h4>Sorei Pañidlen</h4>
+			</div>	
 		</section>
 
+		<!-- VIDEOS -->
 		<section class="secVideos" id="secVideos">
 			<div class="divDestacados divGVideo">
 				<div class="headDestacados headGVideo">
@@ -186,25 +132,22 @@
 			</div>
 
 		</section>
+
 	</div>
-	<footer>
-		<div class="divPlaying">
-			<div>
-				<img src="img/springning.jpg" alt="" class="imgPlaying">
-				<h5>Sigue viendo...</h5>
-			</div>
-		</div>
-	</footer>
 
 	<script type="text/javascript">
 		var $openButton = document.getElementById('swOpen');
-		var $secVideos = document.getElementById('secVideos');
-		var $frmSearch = document.getElementById('frmSearch');
+		/*var $secVideos = document.getElementById('secVideos');*/
+		var $frmSearchForm = document.getElementById('frmSearchForm');
+		var $divUser = document.getElementById('divUser');
 		
 		$openButton.addEventListener('click', function(){
-			$frmSearch.classList.toggle('active');
-			$secVideos.classList.toggle('active');
+			$frmSearchForm.classList.toggle('active');
+			$divUser.classList.toggle('active');
+			/*$secVideos.classList.toggle('active');*/
 		});
 	</script>
+
+
 </body>
 </html>
