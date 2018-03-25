@@ -312,7 +312,7 @@ h1, h2, h3, h4, h5 {
 @media screen and (max-device-width : 767px) 
 	and (orientation : landscape) {
 		.bigContainer {
-			grid-template: 12vh 2vh 13vh 1fr 100vh 14vh / 1fr;
+			grid-template: 12vh 2vh 13vh 1fr 110vh 14vh / 1fr;
 			grid-template-areas: "PlatziVideo"
 								 "."
 								 "form"
