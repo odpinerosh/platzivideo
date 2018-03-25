@@ -285,6 +285,14 @@ h1, h2, h3, h4, h5 {
 @media only screen 
 	and (min-device-width : 768px) 
 	and (max-device-width : 1024px) 
+	and (orientation : landscape) {
+
+
+}
+
+@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
 	and (orientation : portrait) {
 		
 		.bigContainer {
@@ -360,6 +368,8 @@ h1, h2, h3, h4, h5 {
 		}
 }
 
+
+
 @media only screen 
 	and (min-device-width : 768px) 
 	and (max-device-width : 1024px) 
@@ -367,6 +377,84 @@ h1, h2, h3, h4, h5 {
 		
 		.bigContainer {
 			grid-template: 12vh 10vh 1fr 70vh 14vh / 1fr;
+			grid-template-areas: "PlatziVideo"
+								 "form"
+								 "video"
+								 "aside"
+								 "footer";
+			margin-right: 0;							 
+		}
+
+		.headPlatzi .dSpan {
+			visibility: hidden;
+		}
+
+		.frmSearch {
+		    padding: 6px 10px;
+		    grid-area: form;
+		    display: grid;
+		    grid-template: 1fr / 60% 40%;
+		    grid-auto-rows: 0;
+		    grid-auto-columns: 0;
+		    grid-column-gap: 20px
+		}
+
+			.frmSearchForm {
+				z-index: auto;
+				margin-top: 0;
+				align-self: center;				
+			}
+		
+		.divUser {
+			z-index: auto;
+			margin-top: 0;
+			display: flex;
+			align-items: center;
+			justify-self: center;
+		}		
+
+	.divGVideo {
+		margin: 15px 15px 0 15px;
+	}
+
+		.imgGVideo {
+			grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+			grid-gap: 12px;
+		}
+	
+	.leftBar {
+		margin-top: 15px;
+		grid-template: 1fr / 1fr 1fr;
+		grid-auto-rows: 0;
+		grid-auto-columns: 0;
+		grid-column-gap: 10px;
+		grid-template-areas: "myPlayLst frPlayLst";
+	}
+
+		.frPlayList {
+			margin-top: 15px;
+		}
+
+		.h2List {
+			font-size: 1.5em;
+		}
+
+		.lstPlay li {
+			font-size: 1.2em;
+		}
+
+		.h3Friends {
+			font-size: 1.2em;
+		}
+}
+
+@media only screen 
+	and (min-device-width : 1025px) 
+	and (max-device-width : 1024px) 
+	and (orientation : portrait) {
+		
+		.bigContainer {
+			grid-template: 12vh 10vh 1fr 50vh 14vh / 1fr;
 			grid-template-areas: "PlatziVideo"
 								 "form"
 								 "video"
