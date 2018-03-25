@@ -18,7 +18,9 @@
 					<span class="pinkPlatzi">Vídeo</span>
 				</h1>
 			</div>
-			<div class="dSpan"><span id="swOpen">Buscar</span></div>
+			<div class="dSpan">
+				<span class="swOpen" id="swOpen">Buscar</span>
+			</div>
 		</header>
 
 		<!-- BUSQUEDA / IMAGEN DE USUARIO -->
@@ -34,7 +36,7 @@
 
 		<!-- VIDEOS -->
 		<section class="secVideos" id="secVideos">
-			<div class="divDestacados divGVideo">
+			<div class="divDestacados divGVideo" id="divGVideo">
 				<div class="headDestacados headGVideo">
 					<span class="txtIntro">Lo mejor de la semana</span>
 					<h4>Destacados</h4>
@@ -66,7 +68,7 @@
 					</figure>
 				</div>
 			</div>
-			<div class="divProgramar divGVideo">
+			<div class="divProgramar divGVideo" id="divGVideo">
 				<div class="headProgramar headGVideo">
 					<span class="txtIntro">Si deseas concentrarte...</span>
 					<h4>Para programar</h4>
@@ -98,7 +100,7 @@
 					</figure>
 				</div>
 			</div>
-			<div class="divTope divGVideo">
+			<div class="divTope divGVideo" id="divGVideo">
 				<div class="headTope headGVideo">
 					<span class="txtIntro">Hasta el Tope</span>
 					<h4>Llena tu cabeza de rock</h4>
@@ -137,14 +139,14 @@
 
 	<script type="text/javascript">
 		var $openButton = document.getElementById('swOpen');
-		/*var $secVideos = document.getElementById('secVideos');*/
+		var $divGVideo = document.getElementById('divGVideo');
 		var $frmSearchForm = document.getElementById('frmSearchForm');
 		var $divUser = document.getElementById('divUser');
 		
 		$openButton.addEventListener('click', function(){
 			$frmSearchForm.classList.toggle('active');
 			$divUser.classList.toggle('active');
-			/*$secVideos.classList.toggle('active');*/
+			$divGVideo.classList.toggle('active');
 		});
 	</script>
 
