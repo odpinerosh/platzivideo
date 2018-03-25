@@ -21,13 +21,14 @@ h1, h2, h3, h4, h5 {
 
 .bigContainer {
 	display: grid;
-	grid-template: 12vh 15vh 1fr/ 1fr;
+	grid-template: 12vh 15vh 1fr 3vh auto / 1fr;
 	
-	grid-template-areas: "PlatziVideo"
-						 "form"
-						 "video";/*
-						 "aside"
-						 "footer";*/
+	grid-template-areas: "PlatziVideo" /*12vh*/
+						 "form"        /*15vh*/
+						 "video"       /*1fr*/
+						 "."           /*3vh*/
+						 "aside";    /*1fr*/
+						 /*"footer";*/
 	overflow: hidden;
 }
 
@@ -179,6 +180,7 @@ h1, h2, h3, h4, h5 {
 					text-align: center;
 					font-size: 2vh;
 					color: #848484;
+					margin: 5px 0;
 				}
 
 				.imgVideo {
@@ -214,7 +216,62 @@ h1, h2, h3, h4, h5 {
 		grid-row-gap: 10px; 
 	}
 
+.leftBar {
+	padding-left: 15px;
+	background-color: #050725;
+	color: #F1F1EE;
+	grid-area: aside;
+	display: grid;
+	grid-template: auto auto / auto;
+	grid-row-gap: 10px;
+	align-content: start;
+	grid-template-areas: "myPlayLst"
+						 "frPlayLst";
+}
 
+	.myPlayList {
+		grid-area: myPlayLst;
+	}
+
+	.lstPlay li {
+		font-family: "Arial";
+		font-size: 2vh;
+		font-weight: lighter;
+		padding-bottom: 15px;
+	}
+
+	.lstFriends li {
+		list-style: none;
+		padding-bottom: 15px;
+	}
+
+	.h3Friends {
+		font-family: "Arial";
+		font-size: 2vh;
+		font-weight: lighter;
+	}
+
+	.lstFriends li a {
+		display: inline-flex;
+		text-decoration: none;
+		color: #fff;
+	}
+
+	.imgFriends {
+	    border-radius: 50%;
+	    width: 5vh;
+	    height: 5vh;
+	    object-fit: cover;
+	    padding-right: 10px;
+	}
+
+	.frPlayList {
+		grid-area: frPlayLst;
+	}
+
+	.h2List {
+		font-size: 2.8vh;
+	}
 
 /*
 
