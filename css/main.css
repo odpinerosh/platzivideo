@@ -283,7 +283,7 @@ h1, h2, h3, h4, h5 {
 				}
 
 @media screen
-	and (max-device-width: 320px) {
+	and (max-width: 320px) {
 		.bigContainer {
 			grid-template: 10vh 4vh 13vh 1fr 155vh 14vh / 1fr;
 			grid-template-areas: "PlatziVideo"
@@ -309,7 +309,7 @@ h1, h2, h3, h4, h5 {
 		}
 	}
 
-@media screen and (max-device-width : 767px) 
+@media screen and (max-width : 767px) 
 	and (orientation : landscape) {
 		.bigContainer {
 			grid-template: 12vh 2vh 13vh 1fr 110vh 14vh / 1fr;
@@ -404,8 +404,8 @@ h1, h2, h3, h4, h5 {
 
 
 @media screen 
-	and (min-device-width : 768px) 
-	and (max-device-width : 1024px) 
+	and (min-width : 768px) 
+	and (max-width : 1024px) 
 	and (orientation : portrait) {
 		
 		.bigContainer {
@@ -482,12 +482,120 @@ h1, h2, h3, h4, h5 {
 }
 
 @media screen 
-	and (min-device-width : 768px) 
-	and (max-device-width : 1024px) 
+	and (min-width : 374px) 
+	and (max-width : 813px) 
 	and (orientation : landscape) {
 		
 		.bigContainer {
-			grid-template: 12vh 10vh 1fr 86vh 14vh / 1fr;
+			grid-template: 12vh 10vh 1fr 90vh 14vh / 1fr;
+			grid-template-areas: "PlatziVideo"
+								 "form"
+								 "video"
+								 "aside"
+								 "footer";
+			margin-right: 0;							 
+		}
+
+		.headPlatzi .dH1 {
+			font-size: .8rem;
+		}
+		
+		.headPlatzi .dSpan {
+			visibility: hidden;
+		}
+
+		.frmSearch {
+		    padding: 6px 10px;
+		    grid-area: form;
+		    display: grid;
+		    grid-template: 1fr / 60% 40%;
+		    grid-auto-rows: 0;
+		    grid-auto-columns: 0;
+		    grid-column-gap: 20px
+		}
+
+			.frmSearchForm {
+				z-index: auto;
+				margin-top: 0;
+				align-self: center;				
+			}
+
+				.txtSearch {
+					font-size: 3vh;
+				}
+		
+		.divUser {
+			z-index: auto;
+			margin-top: 0;
+			display: flex;
+			align-items: center;
+			justify-self: center;
+		}	
+
+			.divUser img {
+			    width: 7vh;
+			    height: 7vh;
+			}
+
+			.divUser h4 {
+				font-size: 4vh;
+			}	
+
+	.divGVideo {
+		margin: 15px 15px 0 15px;
+	}
+		.headGVideo span {
+			font-size: 3.3vh;
+		}
+
+		.headGVideo h4 {
+			font-size: 3.3vh;
+		}
+
+		.imgGVideo {
+			grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+			grid-gap: 12px;
+		}
+	
+		.figVideo figcaption {
+			font-size: 3vh;
+			margin: 6px 0;
+		}
+
+	.leftBar {
+		margin-top: 15px;
+		grid-template: 1fr / 1fr 1fr;
+		grid-auto-rows: 0;
+		grid-auto-columns: 0;
+		grid-column-gap: 10px;
+		grid-template-areas: "myPlayLst frPlayLst";
+	}
+
+		.frPlayList {
+			margin-top: 15px;
+		}
+
+		.h2List {
+			font-size: .8em;
+		}
+
+		.lstPlay li {
+			font-size: .6em;
+		}
+
+		.h3Friends {
+			font-size: .6em;
+		}
+}
+
+
+@media screen 
+	and (min-width : 814px) 
+	and (max-width : 1024px) 
+	and (orientation : landscape) {
+		
+		.bigContainer {
+			grid-template: 12vh 10vh 1fr 60vh 14vh / 1fr;
 			grid-template-areas: "PlatziVideo"
 								 "form"
 								 "video"
@@ -589,11 +697,11 @@ h1, h2, h3, h4, h5 {
 }
 
 @media screen 
-	and (min-device-width : 1025px) 
-{
-
+	and (min-width : 1025px) 
+	and (max-width : 1900px) {
+		
 		.bigContainer {
-			grid-template: 12vh 10vh 1fr 50vh 14vh / 1fr;
+			grid-template: 12vh 10vh 1fr 55vh 14vh / 1fr;
 			grid-template-areas: "PlatziVideo"
 								 "form"
 								 "video"
@@ -602,6 +710,10 @@ h1, h2, h3, h4, h5 {
 			margin-right: 0;							 
 		}
 
+		.headPlatzi .dH1 {
+			font-size: .8rem;
+		}
+		
 		.headPlatzi .dSpan {
 			visibility: hidden;
 		}
@@ -621,6 +733,10 @@ h1, h2, h3, h4, h5 {
 				margin-top: 0;
 				align-self: center;				
 			}
+
+				.txtSearch {
+					font-size: 3vh;
+				}
 		
 		.divUser {
 			z-index: auto;
@@ -628,17 +744,38 @@ h1, h2, h3, h4, h5 {
 			display: flex;
 			align-items: center;
 			justify-self: center;
-		}		
+		}	
+
+			.divUser img {
+			    width: 7vh;
+			    height: 7vh;
+			}
+
+			.divUser h4 {
+				font-size: 4vh;
+			}	
 
 	.divGVideo {
 		margin: 15px 15px 0 15px;
 	}
+		.headGVideo span {
+			font-size: 3.3vh;
+		}
+
+		.headGVideo h4 {
+			font-size: 3.3vh;
+		}
 
 		.imgGVideo {
 			grid-template: 1fr / repeat(4, 1fr);
 			grid-gap: 12px;
 		}
 	
+		.figVideo figcaption {
+			font-size: 3vh;
+			margin: 6px 0;
+		}
+
 	.leftBar {
 		margin-top: 15px;
 		grid-template: 1fr / 1fr 1fr;
@@ -653,14 +790,14 @@ h1, h2, h3, h4, h5 {
 		}
 
 		.h2List {
-			font-size: 1.5em;
+			font-size: .8em;
 		}
 
 		.lstPlay li {
-			font-size: 1.2em;
+			font-size: .6em;
 		}
 
 		.h3Friends {
-			font-size: 1.2em;
+			font-size: .6em;
 		}
 }
