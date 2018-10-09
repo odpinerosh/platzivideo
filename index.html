@@ -154,43 +154,9 @@
 			</div>
 			<div class="frPlayList">
 				<h2 class="h2List">Selecciones de amigos</h2>
-				<ul class="lstFriends">
-					<li>
-						<a href="" class="aImgFr">
-							<img src="img/fr_rociotwo.jpg" class="imgFriends" alt="Rocío Rodríguez">
-							<span class="h3Friends">Rocío Rodríguez</span>
-						</a>
-					</li>
-					<li>
-						<a href="" class="aImgFr">
-							<img src="img/fr_jahir.jpg" class="imgFriends" alt="Jahir Preciado">
-							<span class="h3Friends">Jahir Preciado</span>
-						</a>
-					</li>
-					<li>
-						<a href="" class="aImgFr">
-							<img src="img/fr_mariko.jpg" class="imgFriends" alt="Mariko Takeuchi">
-							<span class="h3Friends">Mariko Takeuchi</span>
-						</a>					
-					</li>
-					<li>
-						<a href="" class="aImgFr">
-							<img src="img/fr_marisol.jpg" class="imgFriends" alt="Marisol Morena">
-							<span class="h3Friends">Marisol Morena Luque</span>
-						</a>					
-					</li>
-					<li>
-						<a href="" class="aImgFr">
-							<img src="img/fr_miranda.jpg" class="imgFriends" alt="Maximiliano Altagracia">
-							<span class="h3Friends">Maximiliano Altagracia</span>
-						</a>					
-					</li>
-					<li>
-						<a href="" class="aImgFr">
-							<img src="img/fr_reyes.jpg" class="imgFriends" alt="Reyes Prieto">
-							<span class="h3Friends">Reyes Prieto</span>
-						</a>					
-					</li>
+				<ul class="lstFriends" id="lstFriendsId">
+					
+					
 				</ul>
 			</div>
 		</aside>
@@ -203,12 +169,47 @@
 		var $divGVideo = document.getElementById('divGVideo');
 		var $frmSearchForm = document.getElementById('frmSearchForm');
 		var $divUser = document.getElementById('divUser');
+		const lstFriends = document.getElementById('lstFriendsId');
+		const urlUsers = 'https://randomuser.me/api/?results=5';
 		
 		$openButton.addEventListener('click', function(){
 			$frmSearchForm.classList.toggle('active');
 			$divUser.classList.toggle('active');
 			$divGVideo.classList.toggle('active');
 		});
+
+
+		async function load() {
+			async function getData(url) {
+				const response = await fetch(url);
+				const data = response.json();
+				//console.log('Data: ', data);
+				return data;
+			}
+		
+			const arrFriends = await getData(urlUsers);
+			//console.log(arrFriends.results[0]);
+			
+			let inner = `<li>
+							<a href="" class="aImgFr">
+								<img src="img/fr_rociotwo.jpg" class="imgFriends" alt="Rocío Rodríguez">
+								<span class="h3Friends">${arrFriends.results[0].name.first}</span>
+							</a>
+						</li>`;
+			lstFriends.innerHTML=inner;
+		}
+
+
+
+		
+
+
+
+		
+
+
+
+
 	</script>
 
 
