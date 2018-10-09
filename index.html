@@ -188,16 +188,30 @@
 			}
 		
 			const arrFriends = await getData(urlUsers);
-			//console.log(arrFriends.results[0]);
+			console.log(arrFriends);
+
+			function arrNombre(obj) {
+				let strFirst = obj.first.charAt(0).toUpperCase().concat(arrFriends.results[0].name.first.substr(1));
+				let strLast = obj.last.charAt(0).toUpperCase().concat(arrFriends.results[0].name.last.substr(1));
+				return strName = strFirst + " " + strLast;
+			}
 			
-			let inner = `<li>
+			function creaPlantilla(user) {
+				return (`<li>
 							<a href="" class="aImgFr">
-								<img src="img/fr_rociotwo.jpg" class="imgFriends" alt="Rocío Rodríguez">
-								<span class="h3Friends">${arrFriends.results[0].name.first}</span>
+								<img src="${user.picture.thumbnail}" class="imgFriends" alt="${arrNombre(user.name)}">
+								<span class="h3Friends">${arrNombre(user.name)}</span>
 							</a>
-						</li>`;
+						</li>`);
+			}
+
+			let inner = '';
+			inner = inner + arrFriends.results.forEach(creaPlantilla(user));
+			//console.log(creaPlantilla("Genial", arrNombre()));
 			lstFriends.innerHTML=inner;
 		}
+
+		
 
 
 
