@@ -170,7 +170,7 @@
 		var $frmSearchForm = document.getElementById('frmSearchForm');
 		var $divUser = document.getElementById('divUser');
 		const lstFriends = document.getElementById('lstFriendsId');
-		const urlUsers = 'https://randomuser.me/api/?results=5';
+		const urlUsers = 'https://randomuser.me/api/?results=7&nat=us,dk,fr,gb';
 		
 		$openButton.addEventListener('click', function(){
 			$frmSearchForm.classList.toggle('active');
@@ -178,8 +178,13 @@
 			$divGVideo.classList.toggle('active');
 		});
 
+		
 
-		async function load() {
+		(async function load() {
+
+			let inner = '';
+			let arrFriends = '';
+
 			async function getData(url) {
 				const response = await fetch(url);
 				const data = response.json();
@@ -187,7 +192,7 @@
 				return data;
 			}
 		
-			const arrFriends = await getData(urlUsers);
+			arrFriends = await getData(urlUsers);
 			console.log(arrFriends);
 
 			function arrNombre(obj) {
@@ -203,13 +208,14 @@
 								<span class="h3Friends">${arrNombre(user.name)}</span>
 							</a>
 						</li>`);
+				
 			}
 
-			let inner = '';
-			inner = inner + arrFriends.results.forEach(creaPlantilla(user));
-			//console.log(creaPlantilla("Genial", arrNombre()));
+			arrFriends.results.forEach((element) => inner = inner + creaPlantilla(element));
 			lstFriends.innerHTML=inner;
-		}
+			
+
+		})()
 
 		
 
