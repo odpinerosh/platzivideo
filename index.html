@@ -196,8 +196,13 @@
 			console.log(arrFriends);
 
 			function arrNombre(obj) {
-				let strFirst = obj.first.charAt(0).toUpperCase().concat(arrFriends.results[0].name.first.substr(1));
-				let strLast = obj.last.charAt(0).toUpperCase().concat(arrFriends.results[0].name.last.substr(1));
+				/*
+				Esta función hace que el primer caracter del nombre y del apellido del amigo
+				quede en mayúscula.
+				*/
+
+				let strFirst = obj.first.charAt(0).toUpperCase().concat(obj.first.substr(1));
+				let strLast = obj.last.charAt(0).toUpperCase().concat(obj.last.substr(1));
 				return strName = strFirst + " " + strLast;
 			}
 			
@@ -216,18 +221,6 @@
 			
 
 		})()
-
-		
-
-
-
-		
-
-
-
-		
-
-
 
 
 	</script>
