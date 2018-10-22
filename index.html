@@ -191,9 +191,6 @@
 				//console.log('Data: ', data);
 				return data;
 			}
-		
-			arrFriends = await getData(urlUsers);
-			console.log(arrFriends);
 
 			function arrNombre(obj) {
 				/*
@@ -206,18 +203,35 @@
 				return strName = strFirst + " " + strLast;
 			}
 			
-			function creaPlantilla(user) {
+			/*function creaPlantilla(user) {
 				return (`<li>
 							<a href="" class="aImgFr">
 								<img src="${user.picture.thumbnail}" class="imgFriends" alt="${arrNombre(user.name)}">
 								<span class="h3Friends">${arrNombre(user.name)}</span>
 							</a>
 						</li>`);
-				
+			}*/
+
+			function creaPlantilla(user) {
+				return (`<li class="aImgFr">
+							
+								<img src="${user.picture.thumbnail}" class="imgFriends" alt="${arrNombre(user.name)}">
+								<span class="h3Friends">${arrNombre(user.name)}</span>
+							
+						</li>`);
 			}
 
+			function agrListener(classN) {
+				debugger
+				liFriends = document.getElementsByClassName(classN);
+				liFriends.forEach((element) => element.addEventListener('click', () => alert('hiciste clic')));
+			}
+		
+			arrFriends = await getData(urlUsers);
 			arrFriends.results.forEach((element) => inner = inner + creaPlantilla(element));
 			lstFriends.innerHTML=inner;
+			agrListener('aImgFr');
+				
 			
 
 		})()
