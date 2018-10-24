@@ -222,9 +222,11 @@
 			}
 
 			function agrListener(classN) {
-				debugger
+				
 				liFriends = document.getElementsByClassName(classN);
-				liFriends.forEach((element) => element.addEventListener('click', () => alert('hiciste clic')));
+				for (i=0; i < liFriends.length; i++) {
+					liFriends.item(i).addEventListener('click', () => alert('hiciste clic'));
+				}
 			}
 		
 			arrFriends = await getData(urlUsers);

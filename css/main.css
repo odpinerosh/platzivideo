@@ -260,6 +260,7 @@ h1, h2, h3, h4, h5 {
 			}
 
 				.h3Friends {
+					
 					font-family: "Arial";
 					font-size: 1em;
 					font-weight: lighter;
@@ -273,13 +274,28 @@ h1, h2, h3, h4, h5 {
 					color: #fff;
 				}
 
+				
 				.imgFriends {
+					transition: 1s ease;
 				    border-radius: 50%;
 				    width: 5vh;
 				    height: 5vh;
 				    object-fit: cover;
 				    margin-right: 10px;
 				    
+				}
+
+				.aImgFr .h3Friends {
+					transition: 1s ease;
+				}
+
+				.aImgFr .h3Friends:hover {
+					cursor: pointer;
+				}
+
+				.imgFriends:hover {
+					cursor: pointer;
+					transform: scale(1.1) rotate(15deg);
 				}
 
 @media screen
